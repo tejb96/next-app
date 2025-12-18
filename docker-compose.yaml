@@ -1,10 +1,10 @@
-version: '2'
-
-app:
-  build: ./app
-  container_name: next-js-learn
-  ports:
-    - "3000:3000"
-  volumes:
-    - "./app:/app"
-    - "/app/node_modules"
+services:
+  app:
+    build: ./frontend
+    container_name: next-js-learn
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./frontend:/app"
+      - "/app/node_modules"
+      - "/app/.next"
